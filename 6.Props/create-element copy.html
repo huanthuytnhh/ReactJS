@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Props</title>
+    <script
+      src="https://unpkg.com/react@17/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      //PostItem.js
+      // Tao Component PostItem
+      // Ta co the truyen Destructuring vao {image,title,desc,funtion}
+      function PostItem(props) {
+        return (
+          <div className="post-item">
+            <img src={props.image} alt={props.title}></img>
+            <h2 className="post-title">{props.title}</h2>
+            <p className="post-desc">{props.desc}</p>
+            <p className="post-published">{props.publishAt}</p>
+          </div>
+        );
+      }
+      // function PostItem() {
+      //   return (
+      //     <div className="post-item">
+      //       <label htmlFor="input">email</label>
+      //       <input name="email" id="input"></input>
+      //       <img
+      //         src="https://lotusacademy.edu.vn/api/media/download/576/b8ba300b.png"
+      //         alt="C#"
+      //       />
+      //       <h2 className="post-title">C#</h2>
+      //       <p className="post-desc">Se co kien thuc C#</p>
+      //       <p className="post-published">5p truoc</p>
+      //     </div>
+      //   );
+      // }
+      // Tao Component App
+      //App.js
+      function App() {
+        return (
+          <div id="wrapper">
+            <PostItem
+              image="https://lotusacademy.edu.vn/api/media/download/576/b8ba300b.png"
+              title="C#"
+              desc="Se co kien thuc C#"
+              publishAt="5p truoc"
+            />
+
+            <PostItem />
+            <PostItem />
+          </div>
+        );
+      }
+      //index.html
+      ReactDOM.render(<App />, document.getElementById("root"));
+    </script>
+  </body>
+</html>

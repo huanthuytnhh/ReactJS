@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Props</title>
+    <script
+      src="https://unpkg.com/react@17/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      //function courseItem(props)
+      const CourseItem = (props) => (
+        <div>
+          <h2>{props.title}</h2>
+          <img src={props.image}></img>
+          <p>{props.description}</p>
+          <p>{props.studentsCount}</p>
+        </div>
+      );
+      // function App(){return }
+      const App = () => (
+        <div id="wrapper">
+          {courses.map((course) => (
+            <CourseItem
+              key={course.id}
+              title={course.title}
+              image={course.thumnail_cdn}
+              descripton={course.description}
+              studentsCount={course.student_count}
+            />
+          ))}
+        </div>
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://unpkg.com/react@17/umd/react.development.js"
+      crossorigin
+    ></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      /*     // DOM
+           const h1DOM = document.createElement("h1");
+
+           h1DOM.title = "Hello";
+           h1DOM.className = "heading";
+           h1DOM.innerText = "Hello guys";
+           document.body.appendChild(h1DOM);
+           //React
+           // React.createElement(type,props,childen,n);
+           const h1React = React.createElement(
+             "h1",
+             {
+               title: "Hello",
+               className: "heading",
+             },
+             "Hello guy"
+           );
+           console.dir(h1DOM);
+           */
+
+      //DOM
+      // const ulDOM = document.createElement("ul");
+      // const ilDOM1 = document.createElement("li");
+      // const ilDOM2 = document.createElement("li");
+      // ilDOM1.innerText = "Javascript";
+      // ilDOM2.innerText = "ReactJS";
+      // ulDOM.appendChild(ilDOM1);
+      // ulDOM.appendChild(ilDOM2);
+      // document.body.appendChild(ulDOM);
+      // //React
+      // const ulReact = React.createElement(
+      //   "ul",
+      //   null,
+      //   React.createElement("li", null, "Javascript"),
+      //   React.createElement("li", null, "ReactJS")
+      // );
+
+      //BTVN
+      //DOM
+      const divDOM = document.createElement("div");
+      const h2DOM = document.createElement("h2");
+      h2DOM.title = "Hoc Reaact tai F8";
+      h2DOM.innerText = "Hoc ReactJS";
+      const pDOM = document.createElement("p");
+      pDOM.innerText = "Hoc ReactJS tu co ban toi nang cao";
+      divDOM.appendChild(h2DOM);
+      divDOM.appendChild(pDOM);
+
+      console.log(divDOM);
+      //React
+      const divReact = React.createElement(
+        "div",
+        { className: "post-item" },
+        React.createElement("h2", { title: "Hoc React tai F8" }, "Hoc ReactJs"),
+        React.createElement("p", null, "Hoc ReactJs tu co ban toi nang cao")
+      );
+      console.log(divReact);
+    </script>
+  </body>
+</html>

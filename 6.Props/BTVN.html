@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Props</title>
+    <script
+      src="https://unpkg.com/react@17/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      // Tao array cac Course
+      const courses = [];
+
+      // Tạo component courseItem và truyền tham số bằng destructuring với object course
+      const CourseItem = ({ course }) => (
+        <div className="course-item">
+          <h2>{course.title}</h2>
+          <img src={course.thumnail_cdn} alt=""></img>
+          <p>{course.description}</p>
+          <p>{course.student_count}</p>
+        </div>
+      );
+      const App = () => (
+        <div id="wrapper">
+          {courses.map((course) => (
+            <CourseItem key={course.id} course={course} />
+          ))}
+        </div>
+      );
+    </script>
+  </body>
+</html>
